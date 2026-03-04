@@ -32,11 +32,17 @@ print(a > b ^ a > 0)     # XOR(e/ou)
 print(not a > b)         # Negação/contrário
 '''
 
+PESO_MAXIMO = 130
+PESO_LIMITE = 500
+PESO_MINIMO = 10
+
 peso = float(input("Digite o peso: "))
 
-if peso >= 120:
-    print("Não é permitido utilizar o tobogã!!!")
-elif peso < 120 and peso > 0:
+if peso >= PESO_MAXIMO and peso <= PESO_LIMITE:
+    print("Excede o limite de peso!")
+elif peso < PESO_MAXIMO and peso > PESO_MINIMO:
     print("É permitido utilizar o tobogã.")
+elif peso < PESO_MINIMO and peso > 0:
+    print("Peso abaixo do permitido!")
 else:
     print("Peso inválido")
