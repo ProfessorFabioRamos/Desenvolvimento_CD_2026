@@ -52,9 +52,33 @@ Estado: DF
 # nova_mensagem = mensagem.replace('Mariana', "Marcos")
 # print(nova_mensagem)
 
-# Verifica se existe o conteúdo, retorna um bool(true ou false)
-frase_4 = "A IA irá dominar o mundo"
-print("IA" in frase_4)
-print("AI" in frase_4)
-print(frase_4.startswith("A"))  # Verifica se string começa com valor
-print(frase_4.endswith("mundo"))# Verifica se string termina com valor
+# Verifica se existe o conteúdo, retorna um bool(True ou False)
+# frase_4 = "A IA irá dominar o mundo"
+# print("IA" in frase_4)
+# print("AI" in frase_4)
+# print(frase_4.startswith("A"))  # Verifica se string começa com valor
+# print(frase_4.endswith("mundo"))# Verifica se string termina com valor
+
+# Verifica o comprimento da String
+# palavra = "computador"
+# print(palavra)
+# print(len(palavra))
+# print(palavra.count("o")) # Quantidade de caracteres correspondentes
+# print(palavra.count("om"))
+
+# Divisão e junção de Strings
+# frase_5 = "Aprender Python é legal"
+# lista_palavras = frase_5.split()    # Separa pelo espaço e cria lista
+# print(lista_palavras)
+# print(lista_palavras[1])
+#
+# frase_6 = "_".join(lista_palavras)   # Junta elementos de uma lista usando caractere como separador
+# print(frase_6)
+
+# Encontrar posições
+frase_7 = "Python é muito versátil"
+print(frase_7.find("é"))         # Encontra índice da primeira ocorrência
+print(frase_7.find("muito"))
+print(frase_7.find("Java"))
+print(frase_7.index("versátil")) # Encontra índice da primeira ocorrência
+#print(frase_7.index("ruim"))    # Gera um erro
