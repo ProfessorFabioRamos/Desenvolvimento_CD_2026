@@ -1,0 +1,24 @@
+nome = "Mariana"
+frase = 'Olá \nBem-vinda!'
+texto_multi_linha = """
+Nome: Mariana
+Idade: 24
+Estado: DF
+"""
+
+# print(nome)
+# print(frase)
+# print(texto_multi_linha)
+
+# Fatiamento de String
+palavra = "Programação"
+print(palavra)          # Programação
+print(palavra[0])       # P
+print(palavra[10])      # o
+print(palavra[0:4])     # Prog
+# (:) Primeiro valor é inclusivo e segundo é exlusivo
+print(palavra[:5])      # Progr , intervalo do início
+print(palavra[4:])      # ramação , intervalo a partir de
+print(palavra[::2])     # Pormço , de 2 em 2
+print(palavra[1::2])    # rgaaã , de 2 em 2 começando do 1
+print(palavra[-1])      # o, começa do final
