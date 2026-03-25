@@ -82,3 +82,21 @@ print(frase_7.find("muito"))
 print(frase_7.find("Java"))
 print(frase_7.index("versátil")) # Encontra índice da primeira ocorrência
 #print(frase_7.index("ruim"))    # Gera um erro
+
+# Formatações
+nome = "Gabriel"
+idade = 25
+altura = 1.8564522
+# Opções de formatação de String
+print("Olá, meu nome é "+nome+" e tenho "+str(idade)+" anos.")
+print("Olá, meu nome é",nome,"e tenho",idade,"anos.")
+print("Olá, meu nome é {} e tenho {} anos.".format(nome,idade))
+print("Olá, meu nome é {0} e tenho {1} anos.".format(nome,idade))
+print("Olá, meu nome é {1} e tenho {0} anos.".format(nome,idade))
+print(f"Olá, meu nome é {nome} e tenho {idade} anos.")
+# Biblioteca Matemática
+import math
+# Formatação de float
+print(f"{nome} tem {altura:.2f} metros.") # 2 casas decimais
+print(math.ceil(altura))    # Arredonda para cima
+print(math.floor(altura))   # Arredonda para baixo
