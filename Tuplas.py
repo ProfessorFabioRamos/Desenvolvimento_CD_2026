@@ -1,6 +1,7 @@
 # Estruturas de dados lineares
 # Tupla = lista imutável, utiliza ()
 
+'''
 nums = (5,6,25,456,32,4,-8,5)
 #nums = 5,6,25,456,32,4,-8,5     #Sem parênteses
 
@@ -27,3 +28,26 @@ tupla_inteira = nums[:]     # Pegar todos os índices
 print(tupla_inteira)
 indices_invertidos = nums[::-1]  # Tupla invertida
 print(indices_invertidos)
+'''
+'''
+# Print com For (repetição)
+# Tupla contem tipos de variáveis diferentes
+cliente_1 = ("Marcos", 54, "SP", "4623897",False)
+print(cliente_1)
+
+for c in cliente_1:  # c começa do índice 0 e vai até o final
+    print(c)
+
+print("Nome:", cliente_1[0])
+print("Idade:", cliente_1[1])
+print("Estado:", cliente_1[2])
+print("RG:", cliente_1[3])
+print("Ativo:", cliente_1[4])
+'''
+# Funções para verificação
+nums2 = (5,3,5,65,223,67,-54,223)
+print(len(nums2))           # len - Quantidade de elementos
+print(nums2.count(5))       # Quantidade de um elementos específico
+print(nums2.index(223))     # Primeiro índice de um elemento
+print(sum(nums2))           # Calcula a soma dos elementos numéricos
+print(sum(nums2)/len(nums2))# Calcular a média dos números
