@@ -67,6 +67,7 @@ tarefas.clear()                 # Remover tudo(limpar lista)
 print(tarefas)
 '''
 
+'''
 # Ordenação
 armas = ["Machado","Espada Larga","Nunchaku","Katana","Alabarda"]
 print(armas)
@@ -84,3 +85,36 @@ numeros.sort()              # Ordem crescente de numeros
 print(numeros)
 numeros.sort(reverse=True)
 print(numeros)
+'''
+
+# Busca e contagem
+cores = ["Vermelho","Azul","Verde","Azul","Amarelo","Verde"]
+tem_amarelo = "Amarelo" in cores # Boolean, verifica se existe na lista
+tem_roxo = "Roxo" in cores
+print(tem_amarelo)
+print(tem_roxo)
+
+# Quantos elementos daquele existem na lista
+print(cores.count("Azul"))
+print(cores.count("Roxo"))
+
+# Encontrar índice (primeira ocorrência)
+print(cores.index("Verde"))
+
+# Laço de repetição for para printar cada elemento
+print(cores)     # Print com formato de lista
+for c in cores:
+    print("Cor:",c)
+
+# Copia de lista
+nums = [1,2,3]
+print(nums)
+# Copia o endereço de memória, não copia a lista (são dependentes)
+nums_2 = nums
+# Cria uma cópia independente (backup)
+nums_3 = nums.copy()
+nums[2] = 4
+
+print(nums)
+print(nums_2)
+print(nums_3)
