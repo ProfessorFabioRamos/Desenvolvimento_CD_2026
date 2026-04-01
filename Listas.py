@@ -66,3 +66,21 @@ print(tarefas)
 tarefas.clear()                 # Remover tudo(limpar lista)
 print(tarefas)
 '''
+
+# Ordenação
+armas = ["Machado","Espada Larga","Nunchaku","Katana","Alabarda"]
+print(armas)
+armas.sort()                # Ordena em ordem alfabética
+print(armas)
+armas.reverse()             # Inverte a ordem da lista
+print(armas)
+
+armas.sort(reverse=True)    # Ordena e inverte (nesta ordem)
+print(armas)
+
+numeros = [56,25,1000,78,0,-2]
+print(numeros)
+numeros.sort()              # Ordem crescente de numeros
+print(numeros)
+numeros.sort(reverse=True)
+print(numeros)
