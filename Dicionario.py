@@ -79,3 +79,49 @@ for fatu in faturamento.values():   # Iteração apenas nos valores
 for mes, fatu in faturamento.items(): # Iteração no par chave/valor
     print(f"No mês {mes} o faturamento foi {fatu} reais.")
 '''
+
+'''
+# Dicionário aninhado, similiar a JSON
+banco_de_dados = {
+    "cliente_1":{
+        "nome":"Ana",
+        "compra":["Livro","Caneta"]
+    },
+    "cliente_2":{
+        "nome":"Bruno",
+        "compra":["Caderno","Tesoura"]
+    },
+    "cliente_3":{
+        "nome":"Caio",
+        "compra":["Borracha","Livro"]
+    }
+}
+
+#print(banco_de_dados)
+# Dados do cliente 1
+cliente_1 = banco_de_dados["cliente_1"] # Dados do cliente 1
+print(cliente_1)
+
+# Compras do cliente 1
+compras_ana = banco_de_dados["cliente_1"]["compra"]
+print(compras_ana)
+
+# Item 0 da lista de compras do cliente 2
+primeira_compra_bruno = banco_de_dados["cliente_2"]["compra"][0]
+print(primeira_compra_bruno)
+
+# Nome do cliente 3
+nome_cliente_3 = banco_de_dados["cliente_3"]["nome"]
+print(nome_cliente_3)
+'''
+# Mesclar dicionários
+dict1 = {"a":1,"b":2,"c":3}
+dict2 = {"d":4,"e":5,"f":6}
+
+# Comando | mescla dicionários partir do Python 3.9
+dict3 = dict1 | dict2
+print(dict3)
+
+# Versão antiga de mesclagem
+dict4 = {**dict1, **dict2}
+print(dict4)
