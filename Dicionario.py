@@ -41,6 +41,7 @@ perfil_gamificacao.update(
 print(perfil_gamificacao)
 '''
 
+'''
 # Removendo elementos
 carrinho_loja_informatica = {
     "mouse":79.99,
@@ -63,3 +64,6 @@ del carrinho_loja_informatica["teclado_gamer"]
 carrinho_loja_informatica.clear()
 
 print(carrinho_loja_informatica)
+'''
+
+# Iteração (laços de repetição)
