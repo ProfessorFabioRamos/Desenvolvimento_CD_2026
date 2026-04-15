@@ -66,4 +66,16 @@ carrinho_loja_informatica.clear()
 print(carrinho_loja_informatica)
 '''
 
+'''
 # Iteração (laços de repetição)
+faturamento = {"jan":1000,"fev":1500,"mar":1800}
+
+for mes in faturamento.keys():      # Iteração apenas nas chaves
+    print(mes)
+
+for fatu in faturamento.values():   # Iteração apenas nos valores
+    print(fatu)
+
+for mes, fatu in faturamento.items(): # Iteração no par chave/valor
+    print(f"No mês {mes} o faturamento foi {fatu} reais.")
+'''
