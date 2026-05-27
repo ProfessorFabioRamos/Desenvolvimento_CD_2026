@@ -1,4 +1,4 @@
-from terrestre.Terrestre import Terrestre
+from veiculos.terrestre.Terrestre import Terrestre
 
 class Carro(Terrestre):
     def __init__(self, nome, numeroRodas, tipoCombustivel):
