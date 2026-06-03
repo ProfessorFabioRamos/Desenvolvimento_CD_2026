@@ -22,3 +22,8 @@ class JatoGuerra(Aereo):
         super().perderAltitude(decremento)   
         if self.altitude < 0:
             self.altitude = 0
+
+    def mostrarInfo(self):
+        super().mostrarInfo()
+        print("Altitude:",self.altitude)
+        print("Misseis:",self.quantidadeMisseis)
