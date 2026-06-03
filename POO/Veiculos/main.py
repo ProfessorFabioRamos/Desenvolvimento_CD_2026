@@ -25,9 +25,11 @@ carro.mostrarInfo()
 jato = JatoGuerra("F-16",20)
 jato.acelerar(2000)
 jato.ganharAltitude(5000)
+jato.mostrarInfo()
+
 for i in range(10):
     jato.atirarMissel()
-jato.mostrarInfo
+jato.mostrarInfo()
 
 jetski_1 = Jetski("Yamaha FX", True,2)
 jetski_1.embarcar(2)
