@@ -6,7 +6,7 @@ class Jetski(Aquatico):
         self.tripulantes = tripulantes
 
     def embarcar(self, quantidade):
-        if quantidade > 2 or self.tripulantes == 2:
+        if quantidade > 2:
             print("Não é possível embarcar esta quantidade")
         else:
             self.tripulantes += quantidade
@@ -15,6 +15,3 @@ class Jetski(Aquatico):
         self.tripulantes -= quantidade
         if self.tripulantes < 0:
             self.tripulantes = 0
-        
-
-    
