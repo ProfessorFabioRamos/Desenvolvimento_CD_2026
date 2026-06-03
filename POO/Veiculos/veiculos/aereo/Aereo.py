@@ -5,8 +5,8 @@ class Aereo(Veiculo):
         super().__init__(nome)
         self.altitude = 0
     
-    def ganharAltitude(incremento):
-        altitude += incremento
+    def ganharAltitude(self, incremento):
+        self.altitude += incremento
 
-    def perderAltitude(decremento):
-        altitude -= decremento
+    def perderAltitude(self, decremento):
+        self.altitude -= decremento
