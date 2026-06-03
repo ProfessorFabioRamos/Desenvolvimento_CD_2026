@@ -24,8 +24,9 @@ label = tk.Label(root,text="Olá Mundo!", font = (
 # Posiciona a label no centro, com espaçamento vertical
 label.pack(pady=10)
 
-
+# Widget Button, precisa de uma função em command
 button = tk.Button(root, text="Clique Aqui", command=on_button_click)
+# Posiciona a label no centro, com espaçamento vertical
 button.pack(pady=5)
 
 root.mainloop()
