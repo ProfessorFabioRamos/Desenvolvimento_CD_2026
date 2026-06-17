@@ -8,9 +8,36 @@ lista_cadastro = [
     "Nome: Eliz Silva, Idade: 19, Email: eliz@email.com",
 ]
 
+def exibir_cadastro():
+    # Modo de edição ligado
+    caixa_texto.config(state="normal")
+    # Limpa a caixa inteira de 1 até o final
+    caixa_texto.delete("1.0", tk.END)
+    # Juntar todos os elementos da lista mas adiciona uma quebra de linha
+    texto_formatado = "\n".join(lista_cadastro)
+    # Insere texto formatado na caixa de texto do início (END)
+    caixa_texto.insert(tk.END, texto_formatado)
+    # Modo de edição desligado
+    caixa_texto.config(state="disabled")
+
+def toggle_checkbox():
+    valor = var_check.get()
+    valor_string = "Ligado" if valor else "Desligado"
+    label_checkbox.config(text=valor_string)
+
+def select_combo(event):
+    valor = combo_opcoes.get()
+    if valor != "Selecione uma opção":
+        label_estado_civil.config(text=f"Estado Civil: {valor}")
+
+def change_slider(valor): # valor = string
+    print(valor)
+    valor_int = f"{float(valor):.0f}"
+    label_slider.config(text=f"Volume: {valor_int}")
+
 root = tk.Tk()
 root.title("Cadastro")
-root.geometry("450x300")
+root.geometry("450x350")
 
 # Criação do container (notebook) de abas
 notebook = ttk.Notebook(root)
@@ -40,7 +67,7 @@ button_salvar.pack(pady=10)
 label_aba_2 = ttk.Label(aba2, text="Consulta")
 label_aba_2.pack(padx=20, pady=20)
 button_buscar = ttk.Button(aba2, text="Buscar")
-#button_buscar.config(command=exibir_cadastro)
+button_buscar.config(command=exibir_cadastro)
 button_buscar.pack(pady=10)
 # Widget caixa que recebe texto
 caixa_texto = tk.Text(
@@ -62,10 +89,15 @@ var_check.set(False)
 # Widget checkbox
 check_button = ttk.Checkbutton(aba3,
                                text ="Receber Notificações?",
-                               variable = var_check)
-check_button.pack(padx=20,pady=30)
+                               variable = var_check,
+                               command=toggle_checkbox)
+check_button.pack(padx=20,pady=20)
 # Função para buscar o valor da checkbox (não usado aqui)
 #check_button.getboolean()
+# Label do checkbox
+label_checkbox = ttk.Label(aba3, text="Desligado")
+label_checkbox.pack(padx=20,pady=5)
+
 
 # Frame para colocar o dropdown e slider
 frame = ttk.LabelFrame(aba3, text="Opções")
