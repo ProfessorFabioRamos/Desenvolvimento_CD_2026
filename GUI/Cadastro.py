@@ -54,4 +54,53 @@ caixa_texto.pack(pady=20, fill="both", expand=True)
 # Inicia bloqueado por padrão
 caixa_texto.config(state="disabled")
 
+# Aba 3 - Novos Widgets
+# Variável especial de controle do checkbox
+var_check = tk.BooleanVar()
+# Estado inicial do checkbox
+var_check.set(False)
+# Widget checkbox
+check_button = ttk.Checkbutton(aba3,
+                               text ="Receber Notificações?",
+                               variable = var_check)
+check_button.pack(padx=20,pady=30)
+# Função para buscar o valor da checkbox (não usado aqui)
+#check_button.getboolean()
+
+# Frame para colocar o dropdown e slider
+frame = ttk.LabelFrame(aba3, text="Opções")
+frame.pack(padx=10,pady=10)
+
+lista_estado_civil = [
+    "Selecione uma opção",
+    "Solteiro(a)",
+    "Casado(a)",
+    "Divirciado(a)",
+    "Viúvo(a)"
+]
+
+# Dropdown (ComboBox)
+combo_opcoes = ttk.Combobox(frame,
+                            values= lista_estado_civil,
+                            state="readonly")
+combo_opcoes.pack(padx=5,pady=10)
+# Estado incial do Combobox
+combo_opcoes.current(0)
+# Label com estado civil
+label_estado_civil = ttk.Label(frame, text="Estado Civil:")
+label_estado_civil.pack(padx=10,pady=5)
+combo_opcoes.bind("<<ComboboxSelected>>", select_combo)
+
+# Slider (Scale)
+slider = ttk.Scale(frame,
+                    from_ = 0,
+                    to = 100,
+                    orient="horizontal",
+                    command= change_slider
+                    )
+slider.pack(padx=5, pady=10,fill="x")
+# Label com valor do slider(scale)
+label_slider = ttk.Label(frame, text="Volume: 0")
+label_slider.pack(padx=10,pady=5)
+
 root.mainloop()
